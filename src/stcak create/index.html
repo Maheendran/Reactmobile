@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="show"></h1>
+    <h1 id="show1"></h1>
+   
+    <div>
+        <input type="text" name="" id="pushid">
+        <button onclick="push()">push</button>
+    </div>
+    <div>
+       
+        <button onclick="pop()">pop</button>
+    </div>
+    <div>
+       
+        <button onclick="peek()">peek</button>
+    </div>
+</body>
+</html>
+<script>
+    var arr=[]
+    size=5;
+function push(){
+    var shownum=document.getElementById("shownum")
+if(arr.length==size){
+    return overflow
+}
+else{
+   
+var pushh =document.getElementById("pushid").value;
+
+var data=arr.push(pushh)
+document.getElementById("show").innerText=arr
+console.log(arr)
+
+}
+
+}
+function pop(){
+if(arr.length==0){
+    return underflow
+}
+else{
+    var popp=arr.pop()
+console.log(popp)
+// shownum.innerText=popp
+document.getElementById("show1").innerText=popp
+document.getElementById("show").innerText=arr
+}
+}
+function peek(){
+if(arr.length<0){
+    return nothing
+}
+else{
+    console.log(arr[arr.length-1])
+    document.getElementById("show1").innerText=arr[arr.length-1]
+    document.getElementById("show").innerText=arr
+}
+}
+
+
+</script>
